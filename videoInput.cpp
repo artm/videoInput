@@ -23,6 +23,14 @@
 //for threading
 #include <process.h>
 
+
+//change for verbose debug info
+static bool verbose = true;
+
+//keeps track of how many instances of VI are being used
+//don't touch
+static int comInitCount = 0;
+
 ///////////////////////////  HANDY FUNCTIONS  /////////////////////////////
 
 void MyFreeMediaType(AM_MEDIA_TYPE& mt){

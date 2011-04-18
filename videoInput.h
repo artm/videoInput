@@ -114,9 +114,6 @@ Thanks to:
 
 //STUFF YOU CAN CHANGE
 
-//change for verbose debug info
-static bool verbose = true;
-
 //if you need VI to use multi threaded com
 //#define VI_COM_MULTI_THREADED
 
@@ -168,11 +165,6 @@ struct IAMStreamConfig;
 struct _AMMediaType;
 class SampleGrabberCallback;
 typedef _AMMediaType AM_MEDIA_TYPE;
-
-//keeps track of how many instances of VI are being used
-//don't touch
-static int comInitCount = 0;
-
 
 ////////////////////////////////////////   VIDEO DEVICE   ///////////////////////////////////
 
