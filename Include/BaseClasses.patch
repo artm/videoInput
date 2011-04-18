@@ -1,0 +1,93 @@
+diff -u /c/Program Files/Microsoft SDKs/Windows/v6.0/Samples/Multimedia/DirectShow/BaseClasses/refclock.h BaseClasses/refclock.h
+--- /c/Program Files/Microsoft SDKs/Windows/v6.0/Samples/Multimedia/DirectShow/BaseClasses/refclock.h	Wed Jan 24 08:49:18 2007
++++ BaseClasses/refclock.h	Mon Apr 18 18:46:32 2011
+@@ -14,7 +14,7 @@
+ 
+ const UINT RESOLUTION = 1;                      /* High resolution timer */
+ const INT ADVISE_CACHE = 4;                     /* Default cache size */
+-const LONGLONG MAX_TIME = 0x7FFFFFFFFFFFFFFF;   /* Maximum LONGLONG value */
++const LONGLONG MAX_TIME = 0x7FFFFFFFFFFFFFFFLL;   /* Maximum LONGLONG value */
+ 
+ inline LONGLONG WINAPI ConvertToMilliseconds(const REFERENCE_TIME& RT)
+ {
+@@ -72,7 +72,7 @@
+  */
+ 
+ class CBaseReferenceClock
+-: public CUnknown, public IReferenceClock, public CCritSec, public IReferenceClockTimerControl 
++: public CUnknown, public IReferenceClock, public CCritSec
+ {
+ protected:
+     virtual ~CBaseReferenceClock();     // Don't let me be created on the stack!
+@@ -177,7 +177,7 @@
+ protected:
+     CAMSchedule * m_pSchedule;
+ 
+-    void Restart (IN REFERENCE_TIME rtMinTime = 0I64) ;
++    void Restart (IN REFERENCE_TIME rtMinTime = 0) ;
+ };
+ 
+ #endif
+diff -u /c/Program Files/Microsoft SDKs/Windows/v6.0/Samples/Multimedia/DirectShow/BaseClasses/streams.h BaseClasses/streams.h
+--- /c/Program Files/Microsoft SDKs/Windows/v6.0/Samples/Multimedia/DirectShow/BaseClasses/streams.h	Wed Jan 24 08:49:18 2007
++++ BaseClasses/streams.h	Mon Apr 18 18:36:06 2011
+@@ -129,7 +129,7 @@
+ 
+ 
+ #include <strmif.h>     // Generated IDL header file for streams interfaces
+-#include <intsafe.h>    // required by amvideo.h
++//#include <intsafe.h>    // required by amvideo.h
+ 
+ #include <reftime.h>    // Helper class for REFERENCE_TIME management
+ #include <wxdebug.h>    // Debug support for logging and ASSERTs
+diff -u /c/Program Files/Microsoft SDKs/Windows/v6.0/Samples/Multimedia/DirectShow/BaseClasses/transip.h BaseClasses/transip.h
+--- /c/Program Files/Microsoft SDKs/Windows/v6.0/Samples/Multimedia/DirectShow/BaseClasses/transip.h	Wed Jan 24 08:49:18 2007
++++ BaseClasses/transip.h	Mon Apr 18 18:45:07 2011
+@@ -211,7 +211,7 @@
+ 
+ protected:
+ 
+-    __out_opt IMediaSample * CTransInPlaceFilter::Copy(IMediaSample *pSource);
++    __out_opt IMediaSample * Copy(IMediaSample *pSource);
+ 
+ #ifdef PERF
+     int m_idTransInPlace;                 // performance measuring id
+diff -u /c/Program Files/Microsoft SDKs/Windows/v6.0/Samples/Multimedia/DirectShow/BaseClasses/videoctl.h BaseClasses/videoctl.h
+--- /c/Program Files/Microsoft SDKs/Windows/v6.0/Samples/Multimedia/DirectShow/BaseClasses/videoctl.h	Wed Jan 24 08:49:18 2007
++++ BaseClasses/videoctl.h	Mon Apr 18 18:45:46 2011
+@@ -51,7 +51,7 @@
+         CUnknown(pName,pUnk),
+         m_pDirectDraw(NULL) { };
+ 
+-    virtual CAggDirectDraw::~CAggDirectDraw() { };
++    virtual ~CAggDirectDraw() { };
+ 
+     // Set the object we should be aggregating
+     void SetDirectDraw(__inout LPDIRECTDRAW pDirectDraw) {
+diff -u /c/Program Files/Microsoft SDKs/Windows/v6.0/Samples/Multimedia/DirectShow/BaseClasses/wxutil.h BaseClasses/wxutil.h
+--- /c/Program Files/Microsoft SDKs/Windows/v6.0/Samples/Multimedia/DirectShow/BaseClasses/wxutil.h	Wed Jan 24 08:49:18 2007
++++ BaseClasses/wxutil.h	Mon Apr 18 18:43:33 2011
+@@ -358,7 +358,7 @@
+ 
+ inline void * __cdecl memchrInternal(const void *buf, int chr, size_t cnt)
+ {
+-#ifdef _X86_
++#ifdef NEVER_DEFINED_X86_
+     void *pRet = NULL;
+ 
+     _asm {
+@@ -513,6 +513,7 @@
+ MMRESULT CompatibleTimeSetEvent( UINT uDelay, UINT uResolution, __in LPTIMECALLBACK lpTimeProc, DWORD_PTR dwUser, UINT fuEvent );
+ bool TimeKillSynchronousFlagAvailable( void );
+ 
++/*
+ //  Helper to replace lstrcpmi
+ __inline int lstrcmpiLocaleIndependentW(LPCWSTR lpsz1, LPCWSTR lpsz2)
+ {
+@@ -522,5 +523,5 @@
+ {
+     return  CompareStringA(LOCALE_INVARIANT, NORM_IGNORECASE, lpsz1, -1, lpsz2, -1) - CSTR_EQUAL;
+ }
+-
++*/
+ #endif /* __WXUTIL__ */
