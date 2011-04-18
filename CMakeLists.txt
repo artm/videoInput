@@ -5,3 +5,5 @@ add_library(videoInput videoInput.cpp)
 
 include_directories(${CMAKE_SOURCE_DIR}/Include/BaseClasses)
 include_directories(${CMAKE_SOURCE_DIR}/Include/DShow)
+
+add_definitions(-include ${CMAKE_SOURCE_DIR}/unvc.h)
