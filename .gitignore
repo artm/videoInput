@@ -1,12 +1,3 @@
-*.mode1v3
-*.pbxuser
-build/
-obj/
-*.o
-*.exe
-.DS_Store
-
-#codeblocks files
-*/*/*.layout
-*/*/*.depend
-
+# that's the place we expect patched headers to end up in
+/Include/BaseClasses
+/Include/DShow
