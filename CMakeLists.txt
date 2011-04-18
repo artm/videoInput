@@ -1,9 +1,10 @@
-project(videoInput)
-cmake_minimum_required(VERSION 2.8)
+PROJECT(videoInput)
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 
-add_library(videoInput videoInput.cpp)
+ADD_LIBRARY(videoInput videoInput.cpp)
 
-include_directories(${CMAKE_SOURCE_DIR}/Include/BaseClasses)
-include_directories(${CMAKE_SOURCE_DIR}/Include/DShow)
+INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/Include/BaseClasses)
+INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/Include/DShow)
 
-add_definitions(-include ${CMAKE_SOURCE_DIR}/unvc.h)
+SET_TARGET_PROPERTIES(videoInput
+	PROPERTIES COMPILE_FLAGS "-include ${CMAKE_SOURCE_DIR}/unvc.h -Wno-multichar")
