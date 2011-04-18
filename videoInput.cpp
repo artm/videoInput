@@ -14,6 +14,7 @@
 
 // fixing windows / direct x idiosynchrasy
 #define AM_NOVTABLE
+#define __format_string
 #define __in
 #define __out
 #define __inout
@@ -22,6 +23,8 @@
 #define __inout_opt
 #define __deref_out
 #define __deref_out_opt
+#define __deref_in
+#define __deref_inout_opt
 #define __in_bcount(x)
 #define __in_ecount(x)
 #define __in_bcount_opt(x)
