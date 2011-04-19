@@ -1,6 +1,6 @@
-diff -u /c/Program Files/Microsoft SDKs/Windows/v6.0/Samples/Multimedia/DirectShow/BaseClasses/refclock.h BaseClasses/refclock.h
---- /c/Program Files/Microsoft SDKs/Windows/v6.0/Samples/Multimedia/DirectShow/BaseClasses/refclock.h	Wed Jan 24 08:49:18 2007
-+++ BaseClasses/refclock.h	Mon Apr 18 18:46:32 2011
+diff -u BaseClasses.orig\refclock.h BaseClasses\refclock.h
+--- BaseClasses.orig\refclock.h	Wed Jan 24 10:49:18 2007
++++ BaseClasses\refclock.h	Tue Apr 19 10:51:58 2011
 @@ -14,7 +14,7 @@
  
  const UINT RESOLUTION = 1;                      /* High resolution timer */
@@ -28,9 +28,9 @@ diff -u /c/Program Files/Microsoft SDKs/Windows/v6.0/Samples/Multimedia/DirectSh
  };
  
  #endif
-diff -u /c/Program Files/Microsoft SDKs/Windows/v6.0/Samples/Multimedia/DirectShow/BaseClasses/streams.h BaseClasses/streams.h
---- /c/Program Files/Microsoft SDKs/Windows/v6.0/Samples/Multimedia/DirectShow/BaseClasses/streams.h	Wed Jan 24 08:49:18 2007
-+++ BaseClasses/streams.h	Mon Apr 18 18:36:06 2011
+diff -u BaseClasses.orig\streams.h BaseClasses\streams.h
+--- BaseClasses.orig\streams.h	Wed Jan 24 10:49:18 2007
++++ BaseClasses\streams.h	Tue Apr 19 10:51:58 2011
 @@ -129,7 +129,7 @@
  
  
@@ -40,9 +40,9 @@ diff -u /c/Program Files/Microsoft SDKs/Windows/v6.0/Samples/Multimedia/DirectSh
  
  #include <reftime.h>    // Helper class for REFERENCE_TIME management
  #include <wxdebug.h>    // Debug support for logging and ASSERTs
-diff -u /c/Program Files/Microsoft SDKs/Windows/v6.0/Samples/Multimedia/DirectShow/BaseClasses/transip.h BaseClasses/transip.h
---- /c/Program Files/Microsoft SDKs/Windows/v6.0/Samples/Multimedia/DirectShow/BaseClasses/transip.h	Wed Jan 24 08:49:18 2007
-+++ BaseClasses/transip.h	Mon Apr 18 18:45:07 2011
+diff -u BaseClasses.orig\transip.h BaseClasses\transip.h
+--- BaseClasses.orig\transip.h	Wed Jan 24 10:49:18 2007
++++ BaseClasses\transip.h	Tue Apr 19 10:51:58 2011
 @@ -211,7 +211,7 @@
  
  protected:
@@ -52,9 +52,9 @@ diff -u /c/Program Files/Microsoft SDKs/Windows/v6.0/Samples/Multimedia/DirectSh
  
  #ifdef PERF
      int m_idTransInPlace;                 // performance measuring id
-diff -u /c/Program Files/Microsoft SDKs/Windows/v6.0/Samples/Multimedia/DirectShow/BaseClasses/videoctl.h BaseClasses/videoctl.h
---- /c/Program Files/Microsoft SDKs/Windows/v6.0/Samples/Multimedia/DirectShow/BaseClasses/videoctl.h	Wed Jan 24 08:49:18 2007
-+++ BaseClasses/videoctl.h	Mon Apr 18 18:45:46 2011
+diff -u BaseClasses.orig\videoctl.h BaseClasses\videoctl.h
+--- BaseClasses.orig\videoctl.h	Wed Jan 24 10:49:18 2007
++++ BaseClasses\videoctl.h	Tue Apr 19 10:51:58 2011
 @@ -51,7 +51,7 @@
          CUnknown(pName,pUnk),
          m_pDirectDraw(NULL) { };
@@ -64,9 +64,9 @@ diff -u /c/Program Files/Microsoft SDKs/Windows/v6.0/Samples/Multimedia/DirectSh
  
      // Set the object we should be aggregating
      void SetDirectDraw(__inout LPDIRECTDRAW pDirectDraw) {
-diff -u /c/Program Files/Microsoft SDKs/Windows/v6.0/Samples/Multimedia/DirectShow/BaseClasses/wxutil.h BaseClasses/wxutil.h
---- /c/Program Files/Microsoft SDKs/Windows/v6.0/Samples/Multimedia/DirectShow/BaseClasses/wxutil.h	Wed Jan 24 08:49:18 2007
-+++ BaseClasses/wxutil.h	Mon Apr 18 18:43:33 2011
+diff -u BaseClasses.orig\wxutil.h BaseClasses\wxutil.h
+--- BaseClasses.orig\wxutil.h	Wed Jan 24 10:49:18 2007
++++ BaseClasses\wxutil.h	Tue Apr 19 10:51:58 2011
 @@ -358,7 +358,7 @@
  
  inline void * __cdecl memchrInternal(const void *buf, int chr, size_t cnt)
