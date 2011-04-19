@@ -25,9 +25,10 @@ To actually build this you will need:
 
 - cmake.exe
 - MSYS shell or other bash. I haven't able to build from cmd.exe even with MinGW generator
+    - it IS possible however to build in cmd.exe using nmake and visual c, see below
 - patch.exe
 
-(a) headers from old microsoft direct show sdk
+(b) headers from old microsoft direct show sdk
 
 I can't seem to be able to locate the official version, whatever it is. 
 Theodore Watson's original videoInput repository contains a copy, I decided 
@@ -44,7 +45,7 @@ Rationale: one of the files that has to be patched is diff-unfriendly, it has so
 line endings which are cured by the DShow.preprocess.sh (which simply calls unix2dos.exe on that 
 file). After that patching actually fixes the MinGW incompatible files.
 
-(b) headers from BaseClasses directory of windows sdk. I have managed to build with headers from 
+(c) headers from BaseClasses directory of windows sdk. I have managed to build with headers from 
 Vista SDK. Since Microsoft notoriously breaks the internet, I will not provide an URL, other then
 
 	http://www.google.com/search?q=windows+sdk
