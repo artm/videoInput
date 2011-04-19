@@ -13,7 +13,15 @@ Thanks to Paul Fitzpatrick for even more notes on marrying the two and encouragi
 
 INSTRUCTIONS
 
-To actually build this you will need (assuming you're in MSYS shell):
+To actually build this you will need:
+
+(a) prerequisites:
+
+- cmake
+- MSYS shell or other bash. I haven't able to build from cmd.exe even with MinGW generator
+- patch.exe. Not every version works - the one that comes with MSYS doesn't. I used the one
+  from git for windows. The same is true with diff.exe - the ones that comes with git and
+  vim for windows work, the one that comes with MSYS is confused by the line ends or something.
 
 (a) headers from old microsoft direct show sdk
 
@@ -54,7 +62,7 @@ After which libvideoInput.a can be built with cmake. For example...
 	cmake . -G "MSYS Makefiles"
 	make
 	
-or using a separate build directory:
+Or using a separate build directory:
 	
 	cd WHATEVER
 	mkdir build-videoInput
@@ -62,3 +70,9 @@ or using a separate build directory:
 	cmake PATH/TO/videoInput -G "MSYS Makefiles"
 	make
 
+Or, if for some reasone you must build using "MinGW Makefiles" generator:
+
+	cmake . -G "MinGW Makefiles"
+	mingw32-make
+
+	
