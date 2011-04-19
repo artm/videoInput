@@ -1,6 +1,6 @@
-diff -u DShow.orig//dxtrans.h DShow/dxtrans.h
---- DShow.orig//dxtrans.h	2011-04-06 18:18:30 +0000
-+++ DShow/dxtrans.h	2011-04-18 19:23:20 +0000
+diff --strip-trailing-cr -u DShow.orig/dxtrans.h DShow/dxtrans.h
+--- DShow.orig/dxtrans.h	2011-04-06 18:18:30 +0000
++++ DShow/dxtrans.h	2011-04-19 17:30:00 +0000
 @@ -277,7 +277,6 @@
  #include <ddraw.h>
  #include <d3d.h>
@@ -9,9 +9,9 @@ diff -u DShow.orig//dxtrans.h DShow/dxtrans.h
  #if 0
  // Bogus definition used to make MIDL compiler happy
  typedef void DDSURFACEDESC;
-diff -u DShow.orig//strmif.h DShow/strmif.h
---- DShow.orig//strmif.h	2011-04-18 20:07:41 +0000
-+++ DShow/strmif.h	2011-04-18 20:07:48 +0000
+diff --strip-trailing-cr -u DShow.orig/strmif.h DShow/strmif.h
+--- DShow.orig/strmif.h	2011-04-19 17:29:45 +0000
++++ DShow/strmif.h	2011-04-19 17:30:01 +0000
 @@ -20772,8 +20772,8 @@
  /* [local] */ 
  typedef struct tagVMRGUID

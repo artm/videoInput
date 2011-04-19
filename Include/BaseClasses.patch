@@ -1,6 +1,6 @@
-diff -u BaseClasses.orig\refclock.h BaseClasses\refclock.h
---- BaseClasses.orig\refclock.h	Wed Jan 24 10:49:18 2007
-+++ BaseClasses\refclock.h	Tue Apr 19 10:51:58 2011
+diff -u --strip-trailing-cr BaseClasses.orig/refclock.h BaseClasses/refclock.h
+--- BaseClasses.orig/refclock.h	2007-01-24 08:49:18 +0000
++++ BaseClasses/refclock.h	2011-04-19 08:51:58 +0000
 @@ -14,7 +14,7 @@
  
  const UINT RESOLUTION = 1;                      /* High resolution timer */
@@ -28,9 +28,9 @@ diff -u BaseClasses.orig\refclock.h BaseClasses\refclock.h
  };
  
  #endif
-diff -u BaseClasses.orig\streams.h BaseClasses\streams.h
---- BaseClasses.orig\streams.h	Wed Jan 24 10:49:18 2007
-+++ BaseClasses\streams.h	Tue Apr 19 10:51:58 2011
+diff -u --strip-trailing-cr BaseClasses.orig/streams.h BaseClasses/streams.h
+--- BaseClasses.orig/streams.h	2007-01-24 08:49:18 +0000
++++ BaseClasses/streams.h	2011-04-19 08:51:58 +0000
 @@ -129,7 +129,7 @@
  
  
@@ -40,9 +40,9 @@ diff -u BaseClasses.orig\streams.h BaseClasses\streams.h
  
  #include <reftime.h>    // Helper class for REFERENCE_TIME management
  #include <wxdebug.h>    // Debug support for logging and ASSERTs
-diff -u BaseClasses.orig\transip.h BaseClasses\transip.h
---- BaseClasses.orig\transip.h	Wed Jan 24 10:49:18 2007
-+++ BaseClasses\transip.h	Tue Apr 19 10:51:58 2011
+diff -u --strip-trailing-cr BaseClasses.orig/transip.h BaseClasses/transip.h
+--- BaseClasses.orig/transip.h	2007-01-24 08:49:18 +0000
++++ BaseClasses/transip.h	2011-04-19 08:51:58 +0000
 @@ -211,7 +211,7 @@
  
  protected:
@@ -52,9 +52,9 @@ diff -u BaseClasses.orig\transip.h BaseClasses\transip.h
  
  #ifdef PERF
      int m_idTransInPlace;                 // performance measuring id
-diff -u BaseClasses.orig\videoctl.h BaseClasses\videoctl.h
---- BaseClasses.orig\videoctl.h	Wed Jan 24 10:49:18 2007
-+++ BaseClasses\videoctl.h	Tue Apr 19 10:51:58 2011
+diff -u --strip-trailing-cr BaseClasses.orig/videoctl.h BaseClasses/videoctl.h
+--- BaseClasses.orig/videoctl.h	2007-01-24 08:49:18 +0000
++++ BaseClasses/videoctl.h	2011-04-19 08:51:58 +0000
 @@ -51,7 +51,7 @@
          CUnknown(pName,pUnk),
          m_pDirectDraw(NULL) { };
@@ -64,9 +64,9 @@ diff -u BaseClasses.orig\videoctl.h BaseClasses\videoctl.h
  
      // Set the object we should be aggregating
      void SetDirectDraw(__inout LPDIRECTDRAW pDirectDraw) {
-diff -u BaseClasses.orig\wxutil.h BaseClasses\wxutil.h
---- BaseClasses.orig\wxutil.h	Wed Jan 24 10:49:18 2007
-+++ BaseClasses\wxutil.h	Tue Apr 19 10:51:58 2011
+diff -u --strip-trailing-cr BaseClasses.orig/wxutil.h BaseClasses/wxutil.h
+--- BaseClasses.orig/wxutil.h	2007-01-24 08:49:18 +0000
++++ BaseClasses/wxutil.h	2011-04-19 08:51:58 +0000
 @@ -358,7 +358,7 @@
  
  inline void * __cdecl memchrInternal(const void *buf, int chr, size_t cnt)

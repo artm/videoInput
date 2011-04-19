@@ -1,3 +1,8 @@
-# that's the place we expect patched headers to end up in
+# very original headers
+/Include/DShow.orig0
+/Include/BaseClasses.orig
+# dosified DShow headers 
+/Include/DShow.orig
+# patched headers
 /Include/BaseClasses
 /Include/DShow

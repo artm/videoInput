@@ -19,9 +19,7 @@ To actually build this you will need:
 
 - cmake
 - MSYS shell or other bash. I haven't able to build from cmd.exe even with MinGW generator
-- patch.exe. Not every version works - the one that comes with MSYS doesn't. I used the one
-  from git for windows. The same is true with diff.exe - the ones that comes with git and
-  vim for windows work, the one that comes with MSYS is confused by the line ends or something.
+- patch.exe. 
 
 (a) headers from old microsoft direct show sdk
 
