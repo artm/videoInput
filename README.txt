@@ -11,15 +11,21 @@ Thanks to Samuel Audet for his notes on using DirectShow with MinGW
 Thanks to Paul Fitzpatrick for even more notes on marrying the two and encouraging quote above
 (http://makesweet.com/bozo/2008/01/24/compiling-directshow-with-mingw-on-linux)
 
+NOTA BENE
+
+I have managed to build videoInput.lib using cmake's nmake generator and Visual C++ compiler that comes with 
+Microsoft Vista SDK. I don't use Visual C myself and thus haven't had a chance to test the library
+built this way. 
+
 INSTRUCTIONS
 
 To actually build this you will need:
 
 (a) prerequisites:
 
-- cmake
+- cmake.exe
 - MSYS shell or other bash. I haven't able to build from cmd.exe even with MinGW generator
-- patch.exe. 
+- patch.exe
 
 (a) headers from old microsoft direct show sdk
 
@@ -73,4 +79,10 @@ Or, if for some reasone you must build using "MinGW Makefiles" generator:
 	cmake . -G "MinGW Makefiles"
 	mingw32-make
 
-	
+And finally, if you want to use cmake + nmake + visual c (DISCLAIMER this works, 
+but I haven't tested the resulting library), you may go like:
+
+    # assuming you're in the cmd.exe finetuned for using Visual C compiler from
+    cmake . -G "NMake Makefiles"
+    nmake
+
