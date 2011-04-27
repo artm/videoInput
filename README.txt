@@ -17,6 +17,19 @@ I have managed to build videoInput.lib using cmake's nmake generator and Visual 
 Microsoft Vista SDK. I don't use Visual C myself and thus haven't had a chance to test the library
 built this way. 
 
+RATIONALE
+
+There exist several web pages explaining the steps necessary to take to build code using Direct Show (such 
+as, but not limited to, videoInput library) with MinGW. The steps are tedious, error prone and dependent on 
+the particulars of one's configuration (namely, which combination of versions of mingw, direct show and/or 
+windows SDK are used). The goal of this fork is to record my experience in following those instructions in
+an easily reproducible manner ("so that other don't have to"). 
+
+The original library comes with project files and built binaries for a number of C++ environments. 
+Theoretically, cmake is able to produce such project files as well - thus making the fork at least as 
+ubiquitous as the original. In practice though, each environment requires some fine tuning that I'm unable 
+to figure out at this point on my own. 
+
 INSTRUCTIONS
 
 To actually build this you will need:
