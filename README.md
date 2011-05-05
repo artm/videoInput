@@ -5,11 +5,9 @@
 
 ## ACKNOWLEDGEMENTS
 
-Thanks to Theodore Watson for the the library.
-Thanks to Samuel Audet for his notes on using DirectShow with MinGW 
-(http://step.polymtl.ca/~guardia/programming.php)
-Thanks to Paul Fitzpatrick for even more notes on marrying the two and encouraging quote above
-(http://makesweet.com/bozo/2008/01/24/compiling-directshow-with-mingw-on-linux)
+- Thanks to Theodore Watson for the the library.
+- Thanks to Samuel Audet for his [notes on using DirectShow with MinGW](http://step.polymtl.ca/~guardia/programming.php)
+- Thanks to Paul Fitzpatrick for even more [notes on marrying the two and encouraging quote above](http://makesweet.com/bozo/2008/01/24/compiling-directshow-with-mingw-on-linux)
 
 ## NOTA BENE
 
