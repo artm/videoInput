@@ -1,9 +1,9 @@
-videoInput MinGW/cmake building tree.
+# videoInput MinGW/cmake building tree.
 
 	"Finding a reason to do this is the hard part, actually doing it is not that bad..."
 		-- Paul 'bozo' Fitzpatrick
 
-ACKNOWLEDGEMENTS
+## ACKNOWLEDGEMENTS
 
 Thanks to Theodore Watson for the the library.
 Thanks to Samuel Audet for his notes on using DirectShow with MinGW 
@@ -11,13 +11,13 @@ Thanks to Samuel Audet for his notes on using DirectShow with MinGW
 Thanks to Paul Fitzpatrick for even more notes on marrying the two and encouraging quote above
 (http://makesweet.com/bozo/2008/01/24/compiling-directshow-with-mingw-on-linux)
 
-NOTA BENE
+## NOTA BENE
 
 I have managed to build videoInput.lib using cmake's nmake generator and Visual C++ compiler that comes with 
 Microsoft Vista SDK. I don't use Visual C myself and thus haven't had a chance to test the library
 built this way. 
 
-RATIONALE
+## RATIONALE
 
 There exist several web pages explaining the steps necessary to take to build code using Direct Show (such 
 as, but not limited to, videoInput library) with MinGW. The steps are tedious, error prone and dependent on 
@@ -30,7 +30,7 @@ Theoretically, cmake is able to produce such project files as well - thus making
 ubiquitous as the original. In practice though, each environment requires some fine tuning that I'm unable 
 to figure out at this point on my own. 
 
-INSTRUCTIONS
+## INSTRUCTIONS
 
 To actually build this you will need:
 
